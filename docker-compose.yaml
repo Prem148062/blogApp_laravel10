@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  db:
+    image: mysql
+    container_name: mysql_laravel
+    environment:
+      - MYSQL_ROOT_PASSWORD=exmaple
+      - MYSQL_DATABASE=db
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+    ports:
+      - 4444:3306
+    volumes:
+      - my_sql:/var/lib/mysql
+volumes:
+  my_sql:
